@@ -87,7 +87,9 @@ const Header = () => {
             <div className="logo">
               <img src={logo} alt="logo" />
               <div>
-                <h1>Multimart</h1>
+                <Link to="/home">
+                  <h1>Multimart</h1>
+                </Link>
               </div>
             </div>
 
@@ -109,10 +111,10 @@ const Header = () => {
             </div>
 
             <div className="nav__icons">
-              <span className="fav__icon">
+              {/* <span className="fav__icon">
                 <i class="ri-heart-line"></i>
                 <span className="badge">2</span>
-              </span>
+              </span> */}
               <span className="cart__icon" onClick={navigateToCart}>
                 <i class="ri-shopping-bag-line"></i>
                 <span className="badge">{totalQuantity}</span>
@@ -137,6 +139,7 @@ const Header = () => {
                     <div className="d-flex align-items-center justify-content-center flex-column">
                       <Link to="/signup">Signup</Link>
                       <Link to="/login">Login</Link>
+                      <Link to="/dashboard">Dashboard</Link>
                     </div>
                   )}
                 </div>
